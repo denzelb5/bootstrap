@@ -69,3 +69,31 @@ const pies = [
   }
 
   cardBuilder(pies);
+
+  
+
+  /*const filterPies = (event) => {
+      const instructor = event.target.id;
+      console.log(instructor);
+      const selectedPies = [];
+      for (let i = 0; i < pies.length; i++) {
+          const pie = pies[i];
+          if (pie.instructor === instructor) {
+              selectedPies.push(pie)
+          }
+      }
+      cardBuilder(selectedPies)
+  }*/
+  
+
+  document.getElementById('zoe').addEventListener('click', (event) =>{
+      const instructor = event.target.id;
+      const selectedPies = [];
+      for (let i = 0; i < pies.length; i++) {
+          const pie = pies[i];
+          if (pie.instructor === instructor) {
+              selectedPies.push(pie)
+          }
+      }
+      cardBuilder(selectedPies)
+  })
